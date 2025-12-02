@@ -33,7 +33,6 @@ public class Wordle {
 		for (int i = 0; i < secret.length(); i++) {
             if (secret.charAt(i) == guess.charAt(i)){
                 resultRow[i] = 'G';
-                return;
             }
             else if (containsChar(secret, guess.charAt(i))) {
                 resultRow[i] = 'Y';
@@ -126,7 +125,7 @@ public class Wordle {
 
             // Store guess and compute feedback
             // ... use storeGuess and computeFeedback
-            storeGuess(guess, guesses, attempt); 
+            storeGuess(guess, guesses, attempt); //
             computeFeedback(secret, guess, results[attempt]);
 
             // Print board
